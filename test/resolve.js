@@ -134,6 +134,9 @@ describe('CSS resolver', () => {
         
         assert.equal(expand('auto', {fuzzySearchMinScore: 0}), 'align-self: ${1:auto};');
         assert.equal(expand('auto', {fuzzySearchMinScore: 0.3}), 'auto;');
+    });
        
+    it('case insensitive matches', () => {
+        assert.equal(expand('trf:rx'), 'transform: rotateX(${1:angle});');
     })
 });
