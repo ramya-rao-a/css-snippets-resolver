@@ -8,6 +8,9 @@ const DASH = 45; // -
  * @return {Number}             Match score
  */
 var stringScore = function(abbr, string) {
+    abbr = abbr.toLowerCase();
+    string = string.toLowerCase();
+    
     if (abbr === string) {
         return 1;
     }
